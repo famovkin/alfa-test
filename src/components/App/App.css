@@ -1,1 +1,33 @@
+.app {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(
+    to right,
+    #3ab5b0 0%,
+    #3d99be 31%,
+    #56317a 100%
+  );
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
 
+.app__page {
+  width: 80%;
+  height: 95%;
+  background-color: #fff;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.app__main {
+  max-width: 1000px;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 1280px) {
+  .app__main {
+    max-width: calc(100% - 50px);
+  }
+}
