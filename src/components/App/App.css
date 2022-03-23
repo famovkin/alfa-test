@@ -39,3 +39,7 @@
 .app__filter {
   margin-bottom: 10px;
 }
+
+.app__card-list {
+  margin: auto;
+}

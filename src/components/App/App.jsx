@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "../Header/Header";
 import Filter from "../Filter/Filter";
+import CardsList from "../CardsList/CardsList";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
         <Header />
         <main className="app__main">
           <Filter />
-        {/* <CardsList /> */}
+          <CardsList />
         </main>
       </div>
     </div>
