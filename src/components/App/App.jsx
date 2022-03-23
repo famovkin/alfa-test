@@ -1,5 +1,6 @@
 import "./App.css";
 import Header from "../Header/Header";
+import Filter from "../Filter/Filter";
 
 function App() {
   return (
@@ -7,8 +8,8 @@ function App() {
       <div className="app__page">
         <Header />
         <main className="app__main">
-          {/* <Filter />
-          <CardsList /> */}
+          <Filter />
+        {/* <CardsList /> */}
         </main>
       </div>
     </div>

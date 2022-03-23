@@ -31,3 +31,7 @@
     max-width: calc(100% - 50px);
   }
 }
+
+.app__filter {
+  margin-bottom: 10px;
+}
