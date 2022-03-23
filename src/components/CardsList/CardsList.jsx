@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { api } from "../../utils/Api";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCards } from "../../redux/actions/cards";
 import Card from "../Card/Card";
 import "./CardsList.css";
 
 function CardsList() {
-  const [characters, setCharacters] = useState([]);
+  const dispatch = useDispatch();
+  const characters = useSelector(({ cards }) => cards.allCards);
+
   useEffect(() => {
-    api.getCharacters().then((res) => {
-      setCharacters(res.results);
-      console.log(res.results);
-    });
-  }, []);
+    dispatch(fetchCards());
+  }, [dispatch]);
 
   return (
     <ul className="card-list">
