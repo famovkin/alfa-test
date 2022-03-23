@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { api } from "../../utils/Api";
+import Card from "../Card/Card";
 import "./CardsList.css";
 
 function CardsList() {
@@ -13,7 +14,7 @@ function CardsList() {
 
   return (
     <ul className="card-list">
-
+      {characters.map((data) => (<Card key={data.id} {...data} />))}
     </ul>
   );
 }

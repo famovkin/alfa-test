@@ -40,3 +40,8 @@
 .button_type_filter:active {
   transform: scale(0.95);
 }
+
+.button_type_like {
+  filter: brightness(0) saturate(100%) invert(19%) sepia(91%) saturate(6460%)
+    hue-rotate(335deg) brightness(96%) contrast(111%);
+}
