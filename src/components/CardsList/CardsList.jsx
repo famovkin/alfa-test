@@ -27,7 +27,7 @@ function CardsList() {
           ))}
         </ul>
       ) : (
-        <h3 className="app__title">Список закладок пуст</h3>
+        <h3 className="app__title">Список пуст</h3>
       )}
     </>
   );

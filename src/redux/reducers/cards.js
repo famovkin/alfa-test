@@ -19,6 +19,14 @@ const cards = (state = initialState, action) => {
         ...state,
         favorites: updateFavList
       };
+    case "DELETE_CARD":
+      const deleteCardFromArr = (array, action) => array.filter((card) => card.id !== action.payload.id);
+
+      return {
+        ...state,
+        allCards: deleteCardFromArr(state.allCards, action),
+        favorites: deleteCardFromArr(state.favorites, action),
+      };
     default:
       return state;
   }

@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import { useDispatch } from "react-redux";
 import deleteBtn from "../../images/button-delete.svg";
 import disliked from "../../images/button-disliked.svg";
 import liked from "../../images/button-liked.svg";
-import { updateFavorites } from "../../redux/actions/cards";
+import { updateFavorites, deleteCard } from "../../redux/actions/cards";
 import Button from "../Button/Button";
 import "./Card.css";
 
@@ -11,7 +11,7 @@ function Card({ id, name, image, gender, status }) {
   const [isLiked, setIsLiked] = useState(false);
   const dispatch = useDispatch();
 
-  const handleClick = () => {
+  const handleFavClick = () => {
     const card = {
       id,
       name,
@@ -23,11 +23,22 @@ function Card({ id, name, image, gender, status }) {
     setIsLiked((prev) => !prev);
   };
 
+  const handleDelClick = () => {
+    const card = {
+      id,
+      name,
+      image,
+      gender,
+      status,
+    };
+    dispatch(deleteCard(card));
+  };
+
   return (
     <li className="card card-list__card">
       <div className="card__between-items">
         <h2 className="card__title">{name}</h2>
-        <Button icon={deleteBtn} alt="Trash bin">
+        <Button handler={handleDelClick} icon={deleteBtn} alt="Trash bin">
           <img
             className="button__image"
             src={deleteBtn}
@@ -45,7 +56,7 @@ function Card({ id, name, image, gender, status }) {
             {status}
           </p>
         </div>
-        <Button handler={handleClick} type="like" alt="Heart">
+        <Button handler={handleFavClick} type="like" alt="Heart">
           <img
             className="button__image"
             src={isLiked ? liked : disliked}
@@ -57,4 +68,4 @@ function Card({ id, name, image, gender, status }) {
   );
 }
 
-export default Card;
+export default memo(Card);

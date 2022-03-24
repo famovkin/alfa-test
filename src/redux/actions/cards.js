@@ -13,3 +13,8 @@ export const updateFavorites = (card) => ({
   type: "UPDATE_FAVORITES",
   payload: card,
 });
+
+export const deleteCard = (card) => ({
+  type: "DELETE_CARD",
+  payload: card,
+});
