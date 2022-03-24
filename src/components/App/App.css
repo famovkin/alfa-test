@@ -17,8 +17,6 @@
 .app__page {
   width: 80vw;
   min-width: 320px;
-  box-sizing: border-box;
-  padding: 20px;
   min-height: 95%;
   background-color: #fff;
   border-top-left-radius: 30px;
@@ -28,7 +26,7 @@
 .app__main {
   max-width: 1000px;
   margin: auto;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
 }
 
 .app__header {
