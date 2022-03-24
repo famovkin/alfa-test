@@ -44,3 +44,13 @@
 .app__card-list {
   margin: auto;
 }
+
+.app__title {
+  text-align: center;
+  font-size: 25px;
+  margin: 0;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

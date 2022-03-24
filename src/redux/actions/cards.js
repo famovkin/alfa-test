@@ -8,3 +8,8 @@ export const setCards = (cards) => ({
 export const fetchCards = () => (dispatch) => {
   api.getCharacters().then((data) => dispatch(setCards(data.results)));
 };
+
+export const updateFavorites = (card) => ({
+  type: "UPDATE_FAVORITES",
+  payload: card,
+});

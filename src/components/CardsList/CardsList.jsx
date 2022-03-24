@@ -6,16 +6,30 @@ import "./CardsList.css";
 
 function CardsList() {
   const dispatch = useDispatch();
-  const characters = useSelector(({ cards }) => cards.allCards);
+  let characters = useSelector(({ cards }) => cards.allCards);
+  const favorites = useSelector(({ cards }) => cards.favorites);
+  const isFiltered = useSelector(({ filters }) => filters.sortByFavorites);
 
   useEffect(() => {
     dispatch(fetchCards());
   }, [dispatch]);
 
+  if (isFiltered) {
+    characters = favorites;
+  }
+
   return (
-    <ul className="cards-list">
-      {characters.map((data) => (<Card key={data.id} {...data} />))}
-    </ul>
+    <>
+      {characters.length ? (
+        <ul className="cards-list">
+          {characters.map((data) => (
+            <Card key={data.id} {...data} />
+          ))}
+        </ul>
+      ) : (
+        <h3 className="app__title">Список закладок пуст</h3>
+      )}
+    </>
   );
 }
 

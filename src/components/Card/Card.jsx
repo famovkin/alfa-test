@@ -1,14 +1,27 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import deleteBtn from "../../images/button-delete.svg";
 import disliked from "../../images/button-disliked.svg";
 import liked from "../../images/button-liked.svg";
+import { updateFavorites } from "../../redux/actions/cards";
 import Button from "../Button/Button";
 import "./Card.css";
 
-function Card({ name, image, gender, status }) {
+function Card({ id, name, image, gender, status }) {
   const [isLiked, setIsLiked] = useState(false);
+  const dispatch = useDispatch();
 
-  const handleClick = () => setIsLiked((prev) => !prev);
+  const handleClick = () => {
+    const card = {
+      id,
+      name,
+      image,
+      gender,
+      status,
+    };
+    dispatch(updateFavorites(card));
+    setIsLiked((prev) => !prev);
+  };
 
   return (
     <li className="card card-list__card">
@@ -27,10 +40,8 @@ function Card({ name, image, gender, status }) {
         <div className="card__text-content">
           <p className="card__info">Gender: {gender}</p>
           <p className="card__info">
-            Status:{" "}
-            <span className={`card__status card__status_type_${status}`}>
-              {" "}
-            </span>
+            Status:
+            <span className={`card__status card__status_type_${status}`}></span>
             {status}
           </p>
         </div>
