@@ -12,6 +12,7 @@
 .card__title {
   margin: 0;
   font-size: 20px;
+  font-weight: 700;
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -28,6 +29,7 @@
   gap: 3px;
   margin: 0;
   margin-bottom: 10px;
+  font-weight: 300;
 }
 
 .card__info:last-child {
