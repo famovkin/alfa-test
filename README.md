@@ -18,7 +18,8 @@ Rick and Morty Charaters — сайт со списком карточек с и
 - Redux,
 - React Hooks (useState, useEffect, useDispatch, useSelector),
 - работа с API,
-- БЭМ.
+- БЭМ,
+- Prop-types.
 
 ## Инструкция
 
