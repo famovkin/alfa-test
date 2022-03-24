@@ -1,4 +1,5 @@
 .app {
+  box-sizing: border-box;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   background-image: linear-gradient(
     to right,
@@ -9,12 +10,12 @@
   padding-top: 20px;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  min-height: 100vh;
 }
 
 .app__page {
   width: 80%;
-  height: 95%;
+  min-height: 95%;
   background-color: #fff;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;

@@ -13,7 +13,7 @@ function CardsList() {
   }, [dispatch]);
 
   return (
-    <ul className="card-list">
+    <ul className="cards-list">
       {characters.map((data) => (<Card key={data.id} {...data} />))}
     </ul>
   );
