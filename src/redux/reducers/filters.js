@@ -9,6 +9,7 @@ const filters = (state = initialState, action) => {
         ...state,
         sortByFavorites: !state.sortByFavorites,
       };
+
     default:
       return state;
   }

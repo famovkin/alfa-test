@@ -11,7 +11,7 @@ class Api {
   }
 
   getCharacters() {
-    return fetch(this._baseUrl).then((res) => this._checkResponse(res));
+    return fetch(this._baseUrl).then(res => this._checkResponse(res));
   }
 }
 

@@ -20,7 +20,7 @@ function Card({ id, name, image, gender, status }) {
       status,
     };
     dispatch(updateFavorites(card));
-    setIsLiked((prev) => !prev);
+    setIsLiked(prev => !prev);
   };
 
   const handleDelClick = () => {
