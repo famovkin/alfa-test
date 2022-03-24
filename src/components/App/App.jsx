@@ -1,7 +1,9 @@
-import "./App.css";
-import Header from "../Header/Header";
-import Filter from "../Filter/Filter";
+import React from "react";
+
 import CardsList from "../CardsList/CardsList";
+import Filter from "../Filter/Filter";
+import Header from "../Header/Header";
+import "./App.css";
 
 function App() {
   return (

@@ -1,7 +1,8 @@
 import React from "react";
-import Button from "../Button/Button";
 import { useDispatch, useSelector } from "react-redux";
+
 import { changeFilter } from "../../redux/actions/filters";
+import Button from "../Button/Button";
 
 function Filter() {
   const dispatch = useDispatch();
