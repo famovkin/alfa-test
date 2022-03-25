@@ -5,7 +5,13 @@ export const setCards = cards => ({
   payload: cards,
 });
 
+export const setLoaded = (boolean) => ({
+  type: "SET_LOADED",
+  payload: boolean,
+});
+
 export const fetchCards = () => dispatch => {
+  dispatch(setLoaded(false));
   api.getCharacters().then(data => dispatch(setCards(data.results)));
 };
 
@@ -18,3 +24,4 @@ export const deleteCard = card => ({
   type: "DELETE_CARD",
   payload: card,
 });
+

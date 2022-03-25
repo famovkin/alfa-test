@@ -1,6 +1,7 @@
 const initialState = {
   allCards: [],
   favorites: [],
+  isLoaded: false,
 };
 
 const cards = (state = initialState, action) => {
@@ -9,6 +10,7 @@ const cards = (state = initialState, action) => {
       return {
         ...state,
         allCards: action.payload,
+        isLoaded: true,
       };
 
     case "UPDATE_FAVORITES":
@@ -27,6 +29,12 @@ const cards = (state = initialState, action) => {
         allCards: deleteCardFromArr(state.allCards, action),
         favorites: deleteCardFromArr(state.favorites, action),
       };
+
+    case "SET_LOADED":
+      return {
+        ...state,
+        isLoaded: action.payload,
+      }
 
     default:
       return state;
