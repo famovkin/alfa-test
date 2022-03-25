@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/alfa-test/static/css/main.29cbc5da.css",
-    "main.js": "/alfa-test/static/js/main.14f8c7d9.js",
+    "main.js": "/alfa-test/static/js/main.be7cb4f6.js",
     "static/media/Inter-Bold.woff": "/alfa-test/static/media/Inter-Bold.f075d328f5501078018d.woff",
     "static/media/Inter-Medium.woff": "/alfa-test/static/media/Inter-Medium.6ecbd7f53aa1c087d056.woff",
     "static/media/Inter-Light.woff": "/alfa-test/static/media/Inter-Light.afd7e788736e9245964f.woff",
@@ -12,10 +12,10 @@
     "static/media/button-delete.svg": "/alfa-test/static/media/button-delete.42cf9f6ff5ea03def4a345a0ef6fd479.svg",
     "static/media/button-liked.svg": "/alfa-test/static/media/button-liked.fe17a515669479b1e64943e3dd3d3483.svg",
     "main.29cbc5da.css.map": "/alfa-test/static/css/main.29cbc5da.css.map",
-    "main.14f8c7d9.js.map": "/alfa-test/static/js/main.14f8c7d9.js.map"
+    "main.be7cb4f6.js.map": "/alfa-test/static/js/main.be7cb4f6.js.map"
   },
   "entrypoints": [
     "static/css/main.29cbc5da.css",
-    "static/js/main.14f8c7d9.js"
+    "static/js/main.be7cb4f6.js"
   ]
 }
