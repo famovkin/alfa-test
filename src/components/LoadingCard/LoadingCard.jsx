@@ -2,7 +2,7 @@ import React from "react";
 import ContentLoader from "react-content-loader";
 
 const LoadingCard = () => (
-  <li className="card card-list__card">
+  <li className="card">
     <ContentLoader
       speed={2}
       width={200}

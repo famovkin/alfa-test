@@ -1,4 +1,6 @@
 import React from "react";
+import cn from "classnames";
+
 import PropTypes from "prop-types";
 
 import "./Button.css";
@@ -6,7 +8,7 @@ import "./Button.css";
 function Button({type, handler, children, isActive}) {
   return (
     <button
-      className={`button button_type_${type} ${isActive ? "button_active" : ""}`}
+      className={cn('button', `button_type_${type}`, {'button_active' : isActive})}
       onClick={handler}
     >
       {children}

@@ -1,6 +1,7 @@
 import React, { useState, memo } from "react";
 import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
+import cn from "classnames"
 
 import deleteBtn from "../../images/button-delete.svg";
 import disliked from "../../images/button-disliked.svg";
@@ -37,7 +38,7 @@ function Card({ id, name, image, gender, status }) {
   };
 
   return (
-    <li className="card card-list__card">
+    <li className="card">
       <div className="card__between-items">
         <h2 className="card__title">{name}</h2>
         <Button handler={handleDelClick} icon={deleteBtn} alt="Trash bin">
@@ -54,7 +55,7 @@ function Card({ id, name, image, gender, status }) {
           <p className="card__info">Gender: {gender}</p>
           <p className="card__info">
             Status:
-            <span className={`card__status card__status_type_${status}`}></span>
+            <span className={cn("card__status", `card__status_type_${status}`)}></span>
             {status}
           </p>
         </div>
