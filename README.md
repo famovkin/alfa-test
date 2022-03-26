@@ -19,7 +19,9 @@ Rick and Morty Charaters — сайт со списком карточек с и
 - React Hooks (useState, useEffect, useDispatch, useSelector),
 - работа с API,
 - БЭМ,
-- Prop-types.
+- Prop-types,
+- Classnames,
+- React content loader.
 
 ## Инструкция
 
