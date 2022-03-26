@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/alfa-test/static/css/main.29cbc5da.css",
+    "main.css": "/alfa-test/static/css/main.deb5bf41.css",
     "main.js": "/alfa-test/static/js/main.b3646135.js",
     "static/media/Inter-Bold.woff": "/alfa-test/static/media/Inter-Bold.f075d328f5501078018d.woff",
     "static/media/Inter-Medium.woff": "/alfa-test/static/media/Inter-Medium.6ecbd7f53aa1c087d056.woff",
@@ -11,11 +11,11 @@
     "index.html": "/alfa-test/index.html",
     "static/media/button-delete.svg": "/alfa-test/static/media/button-delete.42cf9f6ff5ea03def4a345a0ef6fd479.svg",
     "static/media/button-liked.svg": "/alfa-test/static/media/button-liked.fe17a515669479b1e64943e3dd3d3483.svg",
-    "main.29cbc5da.css.map": "/alfa-test/static/css/main.29cbc5da.css.map",
+    "main.deb5bf41.css.map": "/alfa-test/static/css/main.deb5bf41.css.map",
     "main.b3646135.js.map": "/alfa-test/static/js/main.b3646135.js.map"
   },
   "entrypoints": [
-    "static/css/main.29cbc5da.css",
+    "static/css/main.deb5bf41.css",
     "static/js/main.b3646135.js"
   ]
 }
