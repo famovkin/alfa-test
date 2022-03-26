@@ -41,7 +41,7 @@ function Card({ id, name, image, gender, status }) {
     <li className="card">
       <div className="card__between-items">
         <h2 className="card__title">{name}</h2>
-        <Button handler={handleDelClick} icon={deleteBtn} alt="Trash bin">
+        <Button handler={handleDelClick} icon={deleteBtn}>
           <img
             className="button__image"
             src={deleteBtn}
@@ -59,7 +59,7 @@ function Card({ id, name, image, gender, status }) {
             {status}
           </p>
         </div>
-        <Button handler={handleFavClick} type="like" alt="Heart">
+        <Button handler={handleFavClick} type="like">
           <img
             className="button__image"
             src={isLiked ? liked : disliked}
