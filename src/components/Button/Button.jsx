@@ -8,7 +8,7 @@ import "./Button.css";
 function Button({type, handler, children, isActive}) {
   return (
     <button
-      className={cn('button', `button_type_${type}`, {'button_active' : isActive})}
+      className={cn("button", `button_type_${type}`, {"button_active" : isActive})}
       onClick={handler}
     >
       {children}

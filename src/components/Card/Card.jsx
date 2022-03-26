@@ -76,7 +76,7 @@ Card.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   gender: PropTypes.string.isRequired,
-  status: PropTypes.oneOf(['Alive','Dead', 'unknown']).isRequired,
+  status: PropTypes.oneOf(["Alive", "Dead", "unknown"]).isRequired,
 };
 
 export default memo(Card);
