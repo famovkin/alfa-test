@@ -29,18 +29,6 @@
   padding-bottom: 50px;
 }
 
-.app__header {
-  margin-bottom: 15px;
-}
-
-.app__filter {
-  margin-bottom: 10px;
-}
-
-.app__card-list {
-  margin: auto;
-}
-
 .app__title {
   text-align: center;
   font-size: 25px;

@@ -7,6 +7,10 @@
   justify-items: center;
 }
 
+.app__card-list {
+  margin: auto;
+}
+
 @media (max-width: 1280px) {
   .cards-list {
     grid-template-columns: 1fr 1fr 1fr;

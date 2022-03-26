@@ -2,6 +2,8 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import cn from "classnames";
 
+import './Filter.css';
+
 import { changeFilter } from "../../redux/actions/filters";
 import Button from "../Button/Button";
 
