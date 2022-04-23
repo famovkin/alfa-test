@@ -1,6 +1,5 @@
 import React, { useState, memo } from "react";
 import { useDispatch } from "react-redux";
-import PropTypes from "prop-types";
 import cn from "classnames"
 
 import deleteBtn from "../../images/button-delete.svg";
@@ -70,13 +69,5 @@ function Card({ id, name, image, gender, status }) {
     </li>
   );
 }
-
-Card.propTypes = {
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  gender: PropTypes.string.isRequired,
-  status: PropTypes.oneOf(["Alive", "Dead", "unknown"]).isRequired,
-};
 
 export default memo(Card);
