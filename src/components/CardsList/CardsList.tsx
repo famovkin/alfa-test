@@ -1,17 +1,18 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect, FC } from "react";
+import { useDispatch } from "react-redux";
+import useTypedSelector from "../../hooks/useTypedSelector";
 
 import { fetchCards } from "../../redux/actions/cards";
 import Card from "../Card/Card";
 import LoadingCard from "../LoadingCard/LoadingCard";
 import "./CardsList.css";
 
-function CardsList() {
+const CardsList: FC = () => {
   const dispatch = useDispatch();
-  let characters = useSelector(({ cards }) => cards.allCards);
-  const favorites = useSelector(({ cards }) => cards.favorites);
-  const isFiltered = useSelector(({ filters }) => filters.sortByFavorites);
-  const isLoaded = useSelector(({ cards }) => cards.isLoaded);
+  let characters = useTypedSelector(({ cards }) => cards.allCards);
+  const favorites = useTypedSelector(({ cards }) => cards.favorites);
+  const isFiltered = useTypedSelector(({ filters }) => filters.sortByFavorites);
+  const isLoaded = useTypedSelector(({ cards }) => cards.isLoaded);
 
   useEffect(() => {
     dispatch(fetchCards());
