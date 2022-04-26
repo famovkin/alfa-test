@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 import cards from  "./cards";
-import filters from  "./filters";
+import filters from  "./filters.js";
 
 const rootReducer = combineReducers({
   cards,
@@ -8,3 +8,5 @@ const rootReducer = combineReducers({
 });
 
 export default rootReducer;
+
+export type RootState = ReturnType<typeof rootReducer>
