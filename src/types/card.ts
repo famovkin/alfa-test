@@ -31,7 +31,7 @@ interface AdditionalCardInfo {
   url: string;
 }
 
-interface SetCardsAction {
+export interface SetCardsAction {
   type: CardActionTypes.SET_CARDS;
   payload: Array<Card>;
 }
@@ -46,7 +46,7 @@ export interface DeleteCardAction {
   payload: Card;
 }
 
-interface SetLoadedAction {
+export interface SetLoadedAction {
   type: CardActionTypes.SET_LOADED;
   payload: boolean;
 }
