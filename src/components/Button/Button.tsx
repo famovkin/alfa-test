@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import cn from "classnames";
 
 import { ButtonProps } from "../../types/button";
+
 import "./Button.css";
 
 const Button: FC<ButtonProps> = ({ type, handler, children, isActive }) => {

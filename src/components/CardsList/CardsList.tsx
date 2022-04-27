@@ -1,9 +1,10 @@
 import React, { useEffect, FC } from "react";
 
-import useTypedSelector from "../../hooks/useTypedSelector";
-import { useAction } from "../../hooks/useAction";
 import Card from "../Card/Card";
 import LoadingCard from "../LoadingCard/LoadingCard";
+import { useAction } from "../../hooks/useAction";
+import useTypedSelector from "../../hooks/useTypedSelector";
+
 import "./CardsList.css";
 
 const CardsList: FC = () => {

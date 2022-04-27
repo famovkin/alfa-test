@@ -1,13 +1,14 @@
 import React, { useState, memo, FC } from "react";
 import { useDispatch } from "react-redux";
-import cn from "classnames"
+import cn from "classnames";
 
+import Button from "../Button/Button";
 import deleteBtn from "../../images/button-delete.svg";
 import disliked from "../../images/button-disliked.svg";
 import liked from "../../images/button-liked.svg";
 import { useAction } from "../../hooks/useAction";
 import { CardShort } from "../../types/card";
-import Button from "../Button/Button";
+
 import "./Card.css";
 
 const Card: FC<CardShort> = ({ id, name, image, gender, status }) => {
@@ -43,11 +44,7 @@ const Card: FC<CardShort> = ({ id, name, image, gender, status }) => {
       <div className="card__between-items">
         <h2 className="card__title">{name}</h2>
         <Button handler={handleDelClick} icon={deleteBtn}>
-          <img
-            className="button__image"
-            src={deleteBtn}
-            alt="Trash bin"
-          />
+          <img className="button__image" src={deleteBtn} alt="Trash bin" />
         </Button>
       </div>
       <img className="card__image" src={image} alt={name} />
@@ -56,7 +53,9 @@ const Card: FC<CardShort> = ({ id, name, image, gender, status }) => {
           <p className="card__info">Gender: {gender}</p>
           <p className="card__info">
             Status:
-            <span className={cn("card__status", `card__status_type_${status}`)}></span>
+            <span
+              className={cn("card__status", `card__status_type_${status}`)}
+            ></span>
             {status}
           </p>
         </div>
@@ -70,6 +69,6 @@ const Card: FC<CardShort> = ({ id, name, image, gender, status }) => {
       </div>
     </li>
   );
-}
+};
 
 export default memo(Card);
