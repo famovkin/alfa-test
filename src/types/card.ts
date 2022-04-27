@@ -26,6 +26,11 @@ export interface Card {
   url: string;
 }
 
+export type CardShort = Pick<
+  Card,
+  "id" | "name" | "image" | "gender" | "status"
+>;
+
 interface AdditionalCardInfo {
   name: string;
   url: string;

@@ -1,17 +1,19 @@
-import React, { useState, memo } from "react";
+import React, { useState, memo, FC } from "react";
 import { useDispatch } from "react-redux";
 import cn from "classnames"
 
 import deleteBtn from "../../images/button-delete.svg";
 import disliked from "../../images/button-disliked.svg";
 import liked from "../../images/button-liked.svg";
-import { updateFavorites, deleteCard } from "../../redux/actions/cards";
+import { useAction } from "../../hooks/useAction";
+import { CardShort } from "../../types/card";
 import Button from "../Button/Button";
 import "./Card.css";
 
-function Card({ id, name, image, gender, status }) {
+const Card: FC<CardShort> = ({ id, name, image, gender, status }) => {
   const [isLiked, setIsLiked] = useState(false);
   const dispatch = useDispatch();
+  const { deleteCard, updateFavorites } = useAction();
 
   const handleFavClick = () => {
     const card = {
@@ -21,7 +23,7 @@ function Card({ id, name, image, gender, status }) {
       gender,
       status,
     };
-    dispatch(updateFavorites(card));
+    updateFavorites(card);
     setIsLiked(prev => !prev);
   };
 
