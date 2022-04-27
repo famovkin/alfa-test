@@ -1,22 +1,21 @@
 import React, { useEffect, FC } from "react";
-import { useDispatch } from "react-redux";
-import useTypedSelector from "../../hooks/useTypedSelector";
 
-import { fetchCards } from "../../redux/actions/cards";
+import useTypedSelector from "../../hooks/useTypedSelector";
+import { useAction } from "../../hooks/useAction";
 import Card from "../Card/Card";
 import LoadingCard from "../LoadingCard/LoadingCard";
 import "./CardsList.css";
 
 const CardsList: FC = () => {
-  const dispatch = useDispatch();
   let characters = useTypedSelector(({ cards }) => cards.allCards);
   const favorites = useTypedSelector(({ cards }) => cards.favorites);
   const isFiltered = useTypedSelector(({ filters }) => filters.sortByFavorites);
   const isLoaded = useTypedSelector(({ cards }) => cards.isLoaded);
+  const { fetchCards } = useAction();
 
   useEffect(() => {
-    dispatch(fetchCards());
-  }, [dispatch]);
+    fetchCards();
+  }, []);
 
   if (isFiltered) {
     characters = favorites;
@@ -34,6 +33,6 @@ const CardsList: FC = () => {
       {characters.length === 0 && <h3 className="app__title">Список пуст</h3>}
     </>
   );
-}
+};
 
 export default CardsList;
