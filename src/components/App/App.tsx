@@ -1,11 +1,11 @@
-import React from "react";
+import React, { FC } from "react";
 
 import CardsList from "../CardsList/CardsList";
 import Filter from "../Filter/Filter";
 import Header from "../Header/Header";
 import "./App.css";
 
-function App() {
+const App: FC = () => {
   return (
     <div className="app">
       <div className="app__page">
@@ -17,6 +17,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;

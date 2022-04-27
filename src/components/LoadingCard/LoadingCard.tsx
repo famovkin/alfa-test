@@ -1,7 +1,7 @@
-import React from "react";
+import React, { FC } from "react";
 import ContentLoader from "react-content-loader";
 
-const LoadingCard = () => (
+const LoadingCard: FC = () => (
   <li className="card">
     <ContentLoader
       speed={2}
